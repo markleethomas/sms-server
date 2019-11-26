@@ -1,0 +1,57 @@
+{
+  "devDependencies": {
+    "js2flowchart": "^1.3.2"
+  },
+  "scripts": {
+    "js2flowchart": "js2flowchart",
+    "start": "node index.js"
+  },
+  "name": "synergy-sms-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "ansi-regex": "^3.0.0",
+    "ansi-styles": "^3.2.1",
+    "chalk": "^2.4.2",
+    "color-convert": "^1.9.3",
+    "color-name": "^1.1.3",
+    "commander": "^2.20.1",
+    "config": "^3.2.3",
+    "debug": "^4.1.1",
+    "deepmerge": "^1.5.2",
+    "dom-walk": "^0.1.1",
+    "escape-string-regexp": "^1.0.5",
+    "esdoc": "^1.1.0",
+    "esdoc-standard-plugin": "^1.0.0",
+    "esutils": "^2.0.3",
+    "global": "^4.4.0",
+    "globals": "^11.12.0",
+    "has-flag": "^3.0.0",
+    "is-fullwidth-code-point": "^2.0.0",
+    "js-tokens": "^4.0.0",
+    "jsesc": "^2.5.2",
+    "lodash": "^4.17.15",
+    "min-document": "^2.19.0",
+    "ms": "^2.1.2",
+    "mysql": "^2.17.1",
+    "process": "^0.11.10",
+    "source-map": "^0.5.7",
+    "string-width": "^2.1.1",
+    "strip-ansi": "^4.0.0",
+    "supports-color": "^5.5.0",
+    "to-fast-properties": "^2.0.0",
+    "ws": "^7.1.2",
+    "xml-escape": "^1.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crownnetworking/synergy-sms-server.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/crownnetworking/synergy-sms-server/issues"
+  },
+  "homepage": "https://github.com/crownnetworking/synergy-sms-server#readme",
+  "description": ""
+}
