@@ -30,15 +30,6 @@ CREATE TABLE `Companies` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
---
--- Dumping data for table `Companies`
---
-
-LOCK TABLES `Companies` WRITE;
-/*!40000 ALTER TABLE `Companies` DISABLE KEYS */;
-INSERT INTO `Companies` VALUES (1,'Crown Networking');
-/*!40000 ALTER TABLE `Companies` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `Companies_PhoneNumbers`
@@ -57,17 +48,6 @@ CREATE TABLE `Companies_PhoneNumbers` (
   CONSTRAINT `idCompanies` FOREIGN KEY (`idCompanies`) REFERENCES `Companies` (`idCompanies`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `Companies_PhoneNumbers`
---
-
-LOCK TABLES `Companies_PhoneNumbers` WRITE;
-/*!40000 ALTER TABLE `Companies_PhoneNumbers` DISABLE KEYS */;
-INSERT INTO `Companies_PhoneNumbers` VALUES (1,'2299998129',1),(1,'2299998128',2);
-/*!40000 ALTER TABLE `Companies_PhoneNumbers` ENABLE KEYS */;
-UNLOCK TABLES;
-
 --
 -- Table structure for table `PhoneNumber_Conversations_Messages`
 --
@@ -86,16 +66,6 @@ CREATE TABLE `PhoneNumber_Conversations_Messages` (
   CONSTRAINT `idConversation` FOREIGN KEY (`idPhoneNumber_Conversations`) REFERENCES `PhoneNumbers_Conversations` (`idConversation`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB AUTO_INCREMENT=93 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `PhoneNumber_Conversations_Messages`
---
-
-LOCK TABLES `PhoneNumber_Conversations_Messages` WRITE;
-/*!40000 ALTER TABLE `PhoneNumber_Conversations_Messages` DISABLE KEYS */;
-INSERT INTO `PhoneNumber_Conversations_Messages` VALUES (77,18,'Hey','1','2019-09-09 07:50:48'),(78,18,'Hey','1','2019-09-09 07:50:48'),(79,23,'Inbound 1','1','2019-09-09 10:28:49'),(80,23,'Hello ','1','2019-09-10 08:29:31'),(81,18,'whats goin on','2','2019-09-10 09:46:37'),(82,18,'whats goin on','2','2019-09-10 10:11:03'),(83,18,'whats goin on3','2','2019-09-10 10:11:12'),(84,18,'whats goin on3','2','2019-09-10 10:11:28'),(85,18,'hey you whayts','2','2019-09-10 10:12:03'),(86,18,'Nithing','1','2019-09-10 10:13:04'),(87,24,'matt I am testing','2','2019-09-10 10:37:27'),(88,25,'<#> Hi Tina!  Welcome to the Family Dollar Smart Coupons app.  To verify your phone number please use this code: 525785 GNDtNbi8T+Q','1','2019-09-11 08:25:18'),(89,26,'<#> Hi Tina!  Welcome to the Family Dollar Smart Coupons app.  To verify your phone number please use this code: 299289 GNDtNbi8T+Q','1','2019-09-11 08:26:35'),(90,27,'<#> Hi Tina!  Welcome to the Family Dollar Smart Coupons app.  To verify your phone number please use this code: 624569 GNDtNbi8T+Q','1','2019-09-11 08:39:24'),(91,23,'Do you see this message?','1','2019-09-11 14:35:00'),(92,28,'Hey 9/12','1','2019-09-12 16:45:14');
-/*!40000 ALTER TABLE `PhoneNumber_Conversations_Messages` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `PhoneNumbers_Conversations`
@@ -200,15 +170,6 @@ CREATE TABLE `oauth_clients` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
---
--- Dumping data for table `oauth_clients`
---
-
-LOCK TABLES `oauth_clients` WRITE;
-/*!40000 ALTER TABLE `oauth_clients` DISABLE KEYS */;
-INSERT INTO `oauth_clients` VALUES ('mark','mark',NULL,NULL,NULL,'2',1),('sms_client',NULL,NULL,NULL,NULL,NULL,NULL);
-/*!40000 ALTER TABLE `oauth_clients` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `oauth_jwt`
@@ -224,14 +185,6 @@ CREATE TABLE `oauth_jwt` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
---
--- Dumping data for table `oauth_jwt`
---
-
-LOCK TABLES `oauth_jwt` WRITE;
-/*!40000 ALTER TABLE `oauth_jwt` DISABLE KEYS */;
-/*!40000 ALTER TABLE `oauth_jwt` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `oauth_refresh_tokens`
@@ -250,15 +203,6 @@ CREATE TABLE `oauth_refresh_tokens` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
---
--- Dumping data for table `oauth_refresh_tokens`
---
-
-LOCK TABLES `oauth_refresh_tokens` WRITE;
-/*!40000 ALTER TABLE `oauth_refresh_tokens` DISABLE KEYS */;
-INSERT INTO `oauth_refresh_tokens` VALUES ('002fa9d1f313bd5962070701bacea2fecceb5927','sms_client','2','2019-09-27 17:25:01',NULL),('005870992a3cea3c7c9626f7cbd7a2b8294136c7','sms_client','2','2019-09-27 20:45:45',NULL),('01ebbef03df73b010e233642272b1295936ba78c','sms_client','2','2019-09-27 20:52:26',NULL),('02ba68691a38717ef088eac0c7b08d6babd2c192','sms_client','2','2019-09-30 12:53:05',NULL),('02ea8f85b125e316f77acf486655f0c62146dcef','sms_client','2','2019-09-27 17:31:17',NULL),('03fa329c9156c709683d5de036aeef0f679591ed','sms_client','2','2019-09-30 11:29:23',NULL),('05c18b1203e0bbbb554e11a0cc05b9ca31f33967','sms_client','2','2019-09-27 20:25:18',NULL),('0984def0b492cc2e01014ec7ca2ac8d0bf99502d','mark','2','2019-09-28 00:48:22',NULL),('0997e236e54008849bac03cd5fd0a40ea9eb219f','sms_client','2','2019-09-30 12:56:26',NULL),('09b290f807142c04109e59d704c759c3ecf2f6d8','sms_client','2','2019-09-30 11:29:23',NULL),('0adb826b39d1def8609d7a08e3e4e9a72175cde7','sms_client','2','2019-09-27 13:04:10',NULL),('0c36479ebec911688feec81d3f4762cd8384d6f3','sms_client','2','2019-09-30 11:42:53',NULL),('0ddd4a0887c16f627df64b485b3b56232383add4','mark','bshaffer','2019-09-27 09:40:43',NULL),('0e3a7660ce54382a58c18260fc5ec0640f1cbb02','sms_client','2','2019-09-30 16:47:06',NULL),('0f472686297e362fadc1655f063e070e04f3d8e2','sms_client','2','2019-09-27 17:40:56',NULL),('0fb744351f2d9fd18ec57ff2fad4eedb349d5e41','sms_client','2','2019-09-27 19:59:15',NULL),('1041482a13f6a52c3ffff0be57faff636b1befdc','sms_client','2','2019-09-27 17:41:31',NULL),('11a2678e0340d46ea494677f0ce7cd19d4382a39','sms_client','2','2019-09-30 11:45:03',NULL),('12653011a328897cab083374e7382d2df2ca2468','sms_client','2','2019-09-30 11:29:20',NULL),('127773b28ff25f7447d3f24e0c7eff710ee9d87c','sms_client','2','2019-09-27 19:22:52',NULL),('148cb0a02e928e87dbd6a5829c17b709f6e8c332','sms_client','2','2019-09-27 17:23:45',NULL),('15e05fb896ac5234ffe1970dd33c6177da1e2542','sms_client','3','2019-09-27 13:08:06',NULL),('1851aecf956b57c9ce2809d5a86af11f3aed25c3','sms_client','2','2019-09-30 11:30:45',NULL),('185be30b8e27f02209c87cd3f09e797ff9cf200c','sms_client','2','2019-09-27 19:41:23',NULL),('1973975832ca7b79d6f80da794d7ff56634ac7d9','sms_client','2','2019-09-27 17:14:25',NULL),('1cafb4b583f1546545e27f4e6dd49c93eb78dc0b','sms_client','2','2019-09-30 11:48:37',NULL),('1e108ffc969277d875a1066f3ec34271784b8564','sms_client','2','2019-09-27 19:20:55',NULL),('1ef359a53afb66233260c2a9102f7fd94bef9595','sms_client','2','2019-09-30 16:55:01',NULL),('2218c4396cdf1397ef4e201af37e33f8523efa82','sms_client','2','2019-09-27 20:10:56',NULL),('237b1b5d4b0b916cf8bacad94a9e2032935b2739','sms_client','2','2019-09-27 17:38:39',NULL),('23f5a2b550fd8cf90ad9f434bdb097d7394afb7e','mark','mark','2019-09-27 11:52:15',NULL),('24422eecd7999bd039c45278b82eca02b3ac1588','mark','mark','2019-09-27 11:57:54',NULL),('25b5dcde60f3ba59f221f1c5f686fdd6c8744f02','sms_client','2','2019-09-30 11:57:30',NULL),('2654938553e9a78465b88fc1133bd95622a9732d','sms_client','2','2019-09-27 14:28:31',NULL),('29b094daa965d960d66b7ec8175ad9827d45b740','sms_client','2','2019-09-30 11:32:23',NULL),('2ad59fb2a4581204aae782dee0e0ad00d6455257','sms_client','2','2019-09-27 17:13:41',NULL),('2b0bcc13bb9800db5b02add11259d06509e24d50','sms_client','2','2019-09-27 20:30:14',NULL),('2c655cbf10328ece89f14dfe0281bcd54a9695d8','sms_client','2','2019-09-30 12:43:02',NULL),('2f0d5192d605388f209c7afd975d69e1e9e0022b','sms_client','2','2019-09-27 19:40:51',NULL),('2fcfb1203e6d4633f2b0c71c50ec8df247c22379','sms_client','2','2019-09-30 12:59:23',NULL),('2ff5874328bf03397ff2f596a9eb79d39af16a4a','sms_client','2','2019-09-27 17:37:53',NULL),('3089f1feba3c91fd7e719e3d62966afbe063b00b','sms_client','2','2019-09-27 20:43:15',NULL),('30bc4dc8d624fc47026aa22c50562d02ebd7d49b','sms_client','2','2019-09-27 17:13:03',NULL),('3178c801d03bff4877927bb23af899ae87cd85ea','sms_client','2','2019-09-27 20:09:52',NULL),('321c81d233fab226990e11beff65a7c5f75b5e0f','sms_client','3','2019-09-27 15:29:50',NULL),('32c048efd8ad7263c52cfef401b20612a1e1681a','sms_client','2','2019-09-27 17:27:47',NULL),('3538579ba5ff3443af1f665049b8219183a79f65','sms_client','2','2019-09-30 16:51:54',NULL),('360ca277b29684ecf120fa2ac16ce9749fe78b06','sms_client','2','2019-09-27 22:58:58',NULL),('38a8705ee64cc8cb5052659a773a4aaa8c00c586','sms_client','2','2019-09-27 20:58:07',NULL),('3bbb0eb9e6c0769e82c17f8467d622098fc927c6','sms_client','2','2019-09-27 17:44:21',NULL),('3d180c7b2a92631395ac4fe10bd21baaec7ac207','sms_client','2','2019-09-27 19:11:07',NULL),('3d75712da82a0a5f2b482525e34abf92a386689f','sms_client','2','2019-09-27 23:03:35',NULL),('41cc4302e395e6ff20d8e375cc24a7f0780d079a','sms_client','2','2019-09-27 20:40:22',NULL),('41d4a8c269f5846ca40f4d7d6ec4d8f3e279c35d','sms_client','2','2019-09-27 17:14:50',NULL),('430001d64967d197d9e0052702496d55ffb1d946','sms_client','2','2019-09-27 13:53:08',NULL),('463028ace9bd4441baafcc126a79b1006cf0e3db','sms_client','2','2019-09-27 13:47:26',NULL),('4661aae0d58725a52a314ab10efd11746e4b167c','sms_client','2','2019-09-27 19:23:47',NULL),('46b9c66aab96e206618b8d79b9ed027bc632b0cf','sms_client','2','2019-09-27 20:54:11',NULL),('47ace142fa89b4684748227324d0e91030c41d50','sms_client','2','2019-09-30 11:34:26',NULL),('47d9834c3545f51f1e0766ca7ef684b0bcbf9970','sms_client','2','2019-09-27 13:49:56',NULL),('484800acbcff2f904a9ee04face9a9f1578929ed','mark','mark','2019-09-27 11:53:42',NULL),('490d65132817c26ebfbffa56d8f7668e77aec9c6','sms_client','2','2019-09-27 17:34:09',NULL),('4a0807498f4eb5150fa9bde1623685a8d770cab2','sms_client','2','2019-09-27 20:26:10',NULL),('4ad0ee78ef5ebb81aa6ac3c6b86d749e9c2da598','sms_client','2','2019-09-27 17:13:17',NULL),('4cb03dadd77b90fa5347163cad26967130fc94d1','sms_client','2','2019-09-27 17:17:41',NULL),('4dca64d6628b4b62c61b2580191da32a64fa0be0','mark','bshaffer','2019-09-27 09:37:54',NULL),('4e02ff03f4bef6f6cb2d80f79d3d5f88055e645a','sms_client','2','2019-09-27 22:56:40',NULL),('4f1145377ac07793f5c6d383a16f842851ea5ad3','sms_client','2','2019-09-27 17:41:04',NULL),('51f198c19b2037094ad9aa95fd268171834a011b','sms_client','2','2019-09-27 17:18:25',NULL),('5341da292223809eec52eafdb2f405f3f85b0325','sms_client','2','2019-09-27 20:42:35',NULL),('53fc50b69fa196f076387ee60a777765b93ff101','sms_client','2','2019-09-27 20:20:02',NULL),('57ebf87465b9e2a136a371e18727dcc75b734635','sms_client','2','2019-09-27 19:18:58',NULL),('590d776296dec1ecf1bdca4ecbd34deda6625c45','sms_client','2','2019-09-30 14:37:28',NULL),('591633fd10e3844199ed79cd337565ec811de945','sms_client','2','2019-09-27 13:56:23',NULL),('59b1c5930a6e2bf63cfacc1ec7730110277bd79e','sms_client','2','2019-09-27 19:45:54',NULL),('5d0280fbf762d59b0d22671bd9c4d51986ef5357','sms_client','2','2019-09-30 11:10:19',NULL),('5d339ddbba748ba9f1c61be34a056d816a4e920c','sms_client','2','2019-09-27 18:59:14',NULL),('5ddbfef73bd8a5da580f134e60035ea01bfcbab9','sms_client','2','2019-09-27 17:40:21',NULL),('5fab2ae9ef5e02e977b980ea48310043a2083b70','sms_client','2','2019-09-27 17:42:44',NULL),('6324b5aca744c52fd3cd8a69ab7d00b740a91969','sms_client','2','2019-09-27 17:40:09',NULL),('65915a4920b5795bf1d1ff9f7387ad1a968bed07','mark','2','2019-09-27 12:39:27',NULL),('67c6d7ccf795a50176bd5dcbdcddeaa72ac09123','sms_client','2','2019-09-27 20:00:24',NULL),('692e25a43fad16d37adaa6f0fe70769a49a3fe66','sms_client','2','2019-09-27 20:41:19',NULL),('6b31cba9f28aab006ef9b87a40052a9fa6773993','sms_client','2','2019-09-27 22:44:37',NULL),('6bc19c17617e996c03d3b075742788f1175b6df2','sms_client','2','2019-09-27 23:03:35',NULL),('6dc2adf7a09ba46699749b86729a582879c35021','sms_client','2','2019-09-27 20:03:53',NULL),('6ee476e2abcac3df076e9d52afdbd179b7e0ca3f','sms_client','2','2019-09-30 12:51:31',NULL),('734ac929e85cb6ee074403af5eecb585ba99efb4','sms_client','2','2019-09-27 22:14:05',NULL),('76470c6a372b1da77acaed3efbf453a60abda0a9','sms_client','2','2019-09-27 17:18:35',NULL),('77855f589ab4c3e86a5d2cec8baffa61d05189f1','sms_client','2','2019-09-27 17:15:59',NULL),('78010a8816ca480badf4ee2666143f4cfa688495','sms_client','2','2019-09-27 20:25:28',NULL),('7801b63292b9c2798cd088604bfe114763b95d30','sms_client','2','2019-09-27 20:47:03',NULL),('7848e3c370dd8d8e39d293cdb7df10844a13011e','sms_client','2','2019-09-27 19:16:31',NULL),('79c2c828f074217a4c5a88f7863f756cd0e366ec','sms_client','2','2019-09-27 19:41:29',NULL),('7a871398d181959dfe7b740aea3ddbf76fcaf6be','mark','bshaffer','2019-09-27 09:43:27',NULL),('7c92c895e896733a9dabae1ad149b89b766fd5d4','sms_client','2','2019-09-27 17:43:53',NULL),('7fb560f901d26104652e10fc53d311a827650e2e','sms_client','2','2019-09-27 13:46:37',NULL),('808ae0f46124142c0db42a838c351b4ad29f3410','sms_client','2','2019-09-27 14:35:42',NULL),('80cfb7ef2d911d19b735888f76079f6c0f59c4c7','sms_client','2','2019-09-27 21:04:45',NULL),('8330ac971915075bba393bd890669cffd310b310','sms_client','2','2019-09-27 14:13:24',NULL),('84687bbdf10b6c7d371c3858612609b53fd84a24','sms_client','2','2019-09-27 20:13:53',NULL),('853e7be83ebedf24e6e1ecc60f901bc1bc3a141a','mark','bshaffer','2019-09-27 01:17:16',NULL),('8736b13056c53d6380a890164b129e983182bd2e','sms_client','2','2019-09-27 20:44:43',NULL),('87b96d28c08d37a2195000950fa54c7e33fd602a','sms_client','2','2019-09-27 20:45:20',NULL),('8813c978720634fee1c4e466c73fbdbeb3d65951','mark','bshaffer','2019-09-27 09:40:41',NULL),('911a5774b72a179fc194527661e4da1e341df10b','sms_client','2','2019-09-27 20:25:43',NULL),('9384ed7d8b400da07992b732084e5acdfc7eb06a','sms_client','2','2019-09-27 21:02:45',NULL),('97a8187a4daeb50a92b26ed248b711229b4c8386','sms_client','2','2019-09-27 19:18:24',NULL),('9886e752f58746487a56a327bbe3abbf4f432983','sms_client','2','2019-09-27 22:00:18',NULL),('98923cef75efb6c6d0021a1b6fda939ebda03033','sms_client','2','2019-09-27 17:40:14',NULL),('99bca9390dbd7db2c699cffa397f795ea4a51355','sms_client','2','2019-09-27 17:54:05',NULL),('9b880ac44a951ba094616cd4239ed90c031d6363','sms_client','2','2019-09-27 19:40:29',NULL),('9d355eba4781b4d37f981096c9340b50e6da895a','sms_client','2','2019-09-30 11:42:26',NULL),('9d9a088c7bd5b59c79625fc3b11838b6124c758a','sms_client','2','2019-10-18 12:34:29',NULL),('9eae89fdca9da7556ec888e497af3ad9d5be31b5','sms_client','2','2019-09-27 20:11:34',NULL),('a016779dc095f60eb110c63819fea9aaf87ce5ac','sms_client','2','2019-09-30 13:01:05',NULL),('a27866d5adcfb731666c13caca6e1b403554d8c3','sms_client','2','2019-09-27 20:29:10',NULL),('a554be2b7307b22c5c5d523daefa48ee3aa6c5ad','sms_client','2','2019-09-30 11:58:06',NULL),('a560f14655de24da6a18f6007e38949e2db46c74','sms_client','2','2019-09-27 20:23:39',NULL),('a5acef417b476ca5b0c02f5fbf08b563679cf410','sms_client','2','2019-09-27 19:18:15',NULL),('a7ad8820dcf779e9347845b6791507047234e0f4','sms_client','2','2019-09-27 19:11:46',NULL),('a87c7930d1f65a5c7a498ce9536ee78ccd062fe1','sms_client','2','2019-09-30 12:40:42',NULL),('a8a595600478f2fa323bc31be8f2b532ebea4df0','sms_client','2','2019-09-27 17:51:12',NULL),('aa8be4a8c09c8e676ab7036e72d75422be0bb3c6','sms_client','2','2019-09-30 11:47:38',NULL),('ab731b49c1cf3778636a9e09208c587406673ec5','sms_client','2','2019-09-27 17:49:09',NULL),('ab78fc48bee65e930e74b1a2b48cb512a1c43d71','sms_client','2','2019-09-27 17:21:07',NULL),('abcad7b830d20e9c442c7184e558a7e132431e20','sms_client','2','2019-09-27 19:13:54',NULL),('ac322659b0b716716432023ce4649e991f3ca634','sms_client','2','2019-09-27 14:27:44',NULL),('ae378324d0ec3cb79a6cfc32e0f09ad070e980b4','sms_client','2','2019-09-27 19:37:05',NULL),('b1080276c21aa9cad5adb56b6ebee7c37da0daa4','sms_client','2','2019-09-30 12:08:59',NULL),('b17d6fba1c3341ac8c7365fb693723bbf34fe619','sms_client','2','2019-09-27 20:23:09',NULL),('b230d643cb8235fdcb92a70f6b59640bd9bf3312','sms_client','2','2019-09-30 16:41:41',NULL),('b60d2f2f7c39030644251d3f9bfa2e2769cef3a9','sms_client','2','2019-09-27 17:30:59',NULL),('b65c97dff3d704351c5ae79480c5e733353d04a2','sms_client','2','2019-09-30 13:00:30',NULL),('b6659de11fd0e9d903014dc54e83f9456f19e42c','sms_client','2','2019-09-30 11:59:28',NULL),('b8a90d2ea3e1057cb1f8894aa66aab051c66e844','sms_client','2','2019-09-27 17:38:58',NULL),('b8c476be8ecdf560dbefa28614718a8dbe15b218','sms_client','2','2019-09-27 17:29:54',NULL),('baedc899ebc70854f4805f38bfcb2645566172b2','sms_client','mark','2019-09-27 11:58:09',NULL),('bd2951fad7ecc96ce5d89edb9ce28450e72f8de0','sms_client','2','2019-09-30 16:53:55',NULL),('be63f075cc1b63a08924425651b501f17f778c11','sms_client','2','2019-09-30 16:48:05',NULL),('be85f59a92b433257f7764d808db93d693b2a5d6','sms_client','2','2019-09-27 14:26:52',NULL),('c09eed5a1c6b0b8ae85134d5f28bbbaf2d642b38','sms_client','2','2019-09-27 17:44:03',NULL),('c0b75b97df9e9d6a3ae126033621b6c60409b07e','sms_client','2','2019-09-27 20:40:30',NULL),('c0c8388a35073e414e32b69ac04f70a6a1abaa50','sms_client','2','2019-09-27 20:42:06',NULL),('c152d04ad7885bf5afc56dd6cf53bab1c683c71d','sms_client','2','2019-09-30 16:10:17',NULL),('c571f2f79474c2a27fc7c9b8fa24ef974973b6f0','sms_client','2','2019-09-30 11:45:59',NULL),('c683cc4d73143ab8625a6db9ed2389ad3a56af52','sms_client','2','2019-09-27 17:43:10',NULL),('c6f72ddd79343ed2779d34223f6aacf6a782a36d','sms_client','2','2019-09-27 20:02:03',NULL),('c925bc13df41ad522cf97d3d1eb71db1d952660a','sms_client','2','2019-09-27 22:36:50',NULL),('cb77bf5c3832d992ea6a1b33c8a548b9bdc4fd1f','sms_client','2','2019-09-27 19:44:30',NULL),('cbf834e466271e831df45a7460160d1c41c9d605','sms_client','2','2019-09-30 14:12:00',NULL),('cc43073b453109d5e04b34b08b3c2e64bce6d358','sms_client','2','2019-09-27 22:48:15',NULL),('cc5359795495a9941907fe02c99dfdd83c2eeda6','sms_client','2','2019-09-27 22:50:19',NULL),('cc9776665f6524574310216f428a6c7efb42e0f4','sms_client','2','2019-09-27 17:13:13',NULL),('d00243f2f8668edf3f04a7fc38176445124f70c9','sms_client','2','2019-09-27 17:51:56',NULL),('d0be6e12b095d5947207d6069a9ba05087e212ed','sms_client','2','2019-09-27 19:13:32',NULL),('d156adebf31565a89bc3ea34f4160b034d0ab02f','sms_client','2','2019-09-27 14:45:07',NULL),('d1eb6df72500df164f4f10f2308d0d51c9b8f306','sms_client','2','2019-09-27 17:17:30',NULL),('d4f4195252f16ae0f88214bbb64de986d1057a7a','sms_client','2','2019-09-27 22:14:31',NULL),('d504c8f0ee3e3b69687d5da44805b7a3c062b20a','sms_client','2','2019-09-27 20:25:37',NULL),('d54a7c7c2a5de898380ba2a556f838e713cc7491','sms_client','2','2019-09-27 19:59:59',NULL),('d688fdbc1e3769d31ab487bf6f9933097428787e','sms_client','2','2019-09-27 22:55:24',NULL),('d6a5602b5fdd3ec72f4279c74d7015e5bff8d846','sms_client','2','2019-09-27 17:29:07',NULL),('d7fbf253af45accc4ac834a984727b3c20cff54c','sms_client','2','2019-09-30 11:50:03',NULL),('d86d26ceda8f73b2ed1024819d87cafd49acab27','sms_client','2','2019-09-30 11:19:07',NULL),('dab1fd5c588e04e2235dc857ef8f81397a9eef49','mark','mark','2019-09-27 11:57:29',NULL),('dbebdc4e0fc4f6031e9b2a9f467922eb239cc12e','sms_client','2','2019-09-27 19:44:15',NULL),('ddc5bdc9514538a247a9c074b39006d5ea62c728','sms_client','2','2019-09-27 21:39:42',NULL),('deaf6d29e537ebaf38ce93a5765fff07d7e61e59','sms_client','2','2019-09-27 20:27:40',NULL),('dfa90bcfae8a0320cd859eb0d740a85492504ab1','sms_client','2','2019-09-27 20:22:20',NULL),('dfbe73486fa747257d7b95ca15fe021668c53a26','sms_client','2','2019-09-27 13:49:01',NULL),('e197c39c9963a1be38a05868e920e9179ae51a0b','sms_client','2','2019-09-30 16:38:27',NULL),('e2cf67c81129b842b7f169f5cc4e27ce4c11dec6','sms_client','2','2019-09-27 17:42:22',NULL),('e490f01047a7b1793199c9d504ffd97f30a3e3b9','sms_client','2','2019-09-27 22:57:38',NULL),('e4d7e5f0e76add385090744364d6c636b4218820','mark','2','2019-09-27 12:58:49',NULL),('e56c70632e9e069f128d4f47ea8bbff70a7bdcd8','sms_client','2','2019-09-27 17:15:47',NULL),('e80b0deae6cee054ad7b57a934c7ff54b2d6d9f8','sms_client','2','2019-09-27 20:48:31',NULL),('e9798d4596f6312f9923aa96f53662fe65ea382a','sms_client','2','2019-10-18 13:43:28',NULL),('ea3f9edbb82c430d687b9c49d8cefdca79fed04b','sms_client','2','2019-09-27 17:16:15',NULL),('ead3f05aaddaf93682a445652bd50fe99abf405b','mark','2','2019-09-27 12:59:12',NULL),('eb25d25c38d316e1053327eb64083b90fad41831','sms_client','2','2019-09-27 19:23:27',NULL),('ed9c56c2f946138842d66e989a71e27b5a3fb840','sms_client','2','2019-09-27 17:54:18',NULL),('ee94ce833200a18566b4c35f44e6f1a36ab6d3cb','sms_client','2','2019-09-27 17:22:30',NULL),('f20c88ffc5039a81230d0c5c7220a0336198b21f','sms_client','2','2019-09-27 22:14:06',NULL),('f3c4ce461ef4b51e645fa124bebb7687fcebe141','sms_client','2','2019-09-27 20:49:28',NULL),('f5398ee7b0595539d458aaa575010e8e8af47c32','sms_client','2','2019-09-27 17:48:14',NULL),('f5d844813d5d9f25f6563a8124200a8bc6158036','sms_client','2','2019-09-27 13:53:31',NULL),('f82ce301631dbe56ba39146a74cbd90344f17d0d','sms_client','2','2019-09-27 22:38:37',NULL),('fbd425f811ae2974ce4c71fe6c61d9c1547a6310','sms_client','2','2019-09-27 22:52:59',NULL),('fcf04c10479632d21c3f30cdca62c5cdd744c8b6','sms_client','2','2019-09-27 20:26:43',NULL),('fcf4ea40f6bbe7e0c5d1d932073e40bfb0c32070','sms_client','2','2019-09-27 17:44:58',NULL),('fd2c701c5a8a427c085379c4b15de3c2acfe61b9','sms_client','2','2019-09-27 17:39:06',NULL),('ff3e6eced9228abac299989bd4b5ca6eafd4e2dd','sms_client','2','2019-09-27 21:03:42',NULL);
-/*!40000 ALTER TABLE `oauth_refresh_tokens` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `oauth_scopes`
@@ -273,15 +217,6 @@ CREATE TABLE `oauth_scopes` (
   PRIMARY KEY (`scope`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `oauth_scopes`
---
-
-LOCK TABLES `oauth_scopes` WRITE;
-/*!40000 ALTER TABLE `oauth_scopes` DISABLE KEYS */;
-/*!40000 ALTER TABLE `oauth_scopes` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `oauth_users`
@@ -304,15 +239,6 @@ CREATE TABLE `oauth_users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
---
--- Dumping data for table `oauth_users`
---
-
-LOCK TABLES `oauth_users` WRITE;
-/*!40000 ALTER TABLE `oauth_users` DISABLE KEYS */;
-INSERT INTO `oauth_users` VALUES ('mark','f1b5a91d4d6ad523f2610114591c007e75d15084','mark','thomas','markleethomas.esq@gmail.com',NULL,NULL,'2','1'),('mark2','f1b5a91d4d6ad523f2610114591c007e75d15084','mark',NULL,NULL,NULL,NULL,'3','1');
-/*!40000 ALTER TABLE `oauth_users` ENABLE KEYS */;
-UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
