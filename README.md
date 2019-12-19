@@ -1,0 +1,3 @@
+# NodeJS sms-server
+
+This project is designed to send and receive sms messages from pstn. Messages are stored in a mysql database, and retrieved by client watchers. I've designed the client to be able to be provisioned to have a sms number subscription list. Auth is provided by access and refresh tokens. These tokens are assigned to a specific user_id. Tokens are issued and authenticated by REST API. On authentication the REST API CONNECTION is elevated to websocket and a blob of all subscribed numbers, conversations and messages is retrieved. Sending messages from client is hamdled by REST API. 
